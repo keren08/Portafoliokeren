@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo&family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo&family=Dancing+Script&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.navbar {
+  position: absolute !important;
+  z-index: 3;
+  right: 0;
+  left: 0;
+}
+
+.icon {
+  z-index: 10;
+  color: aliceblue;
+}
+
+.header {
+  width: 100%;
+  height: 35%;
+  position: relative;
+}
+.header__contenedor__img {
+  width: 100%;
+  max-height: 90%;
+  position: absolute !important;
+}
+.header__contenedor__parrafo {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.header__contenedor__parrafo__texto {
+  width: 35%;
+  font-family: "Creepster", cursive;
+  text-align: center;
+  margin: 5%;
+  color: #460046;
+}
+
+.nav__logo {
+  font-family: "Dancing Script", cursive;
+  color: white;
+  font-weight: 900;
+  font-size: 180% !important;
+}
+.nav__logo:hover {
+  color: rgb(219, 32, 219);
+}
+.nav__right {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+.nav__right__item--font {
+  font-family: "Creepster", cursive;
+  font-size: 90%;
+  color: white;
+}
+.nav__right__item--font:hover {
+  color: rgb(219, 32, 219);
+  font-size: 200%;
+}
+
+.sobremi__titulo {
+  text-align: center;
+  font-family: "Creepster", cursive;
+  font-size: 350%;
+  margin-top: 4%;
+}
+.sobremi__contenedor {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.sobremi__contenedor__img {
+  width: 60%;
+  animation: mover 3s linear infinite alternate;
+  max-width: 400px;
+}
+.sobremi__contenedor__descripcion {
+  width: 70%;
+  text-align: justify;
+}
+.sobremi__contenedor__descripcion__cont {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sobremi__contenedor__descripcion__cont__img {
+  min-width: 120px;
+  width: 30%;
+  transform: rotate(20deg);
+}
+
+.habilidades {
+  position: relative;
+  background-color: #980492;
+  overflow: hidden;
+}
+.habilidades__titulo {
+  text-align: center;
+  font-family: "Creepster", cursive;
+  color: white;
+  font-size: 250%;
+  margin: 4%;
+}
+.habilidades__contenedor {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.habilidades__contenedor__img {
+  position: absolute;
+  z-index: 3;
+  left: -130px;
+  top: 60%;
+  width: 80%;
+}
+.habilidades__contenedor__card {
+  width: 60%;
+  margin: 4%;
+  max-width: 400px;
+}
+
+.carrusel__contenedor {
+  background-color: white;
+  padding: 4%;
+  border-radius: 10px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.proyectos__titulo {
+  text-align: center;
+  font-family: "Creepster", cursive;
+  font-size: 350%;
+  margin-top: 4%;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@media screen and (min-width: 850px) {
+  .header {
+    height: 100%;
+  }
+  .header__contenedor__parrafo__texto {
+    width: 35%;
+    font-family: "Creepster", cursive;
+    text-align: center;
+    margin: 5%;
+    color: #460046;
+    font-size: 250%;
+  }
+  .nav__logo {
+    font-size: 380% !important;
+  }
+  .habilidades {
+    position: relative;
+  }
+  .habilidades__titulo {
+    text-align: center;
+    font-family: "Creepster", cursive;
+    color: white;
+  }
+  .habilidades__contenedor {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .habilidades__contenedor__img {
+    position: absolute;
+    z-index: 3;
+    left: 130px;
+    top: auto;
+    width: 30%;
+    bottom: 10%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

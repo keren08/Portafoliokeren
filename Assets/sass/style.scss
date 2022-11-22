@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Dancing+Script&display=swap');
+
+$color-principal:#460046;
+
+$font-principal:'Creepster', cursive;
+$font-logo: 'Dancing Script', cursive;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height:100vh;
+    width: 100%; 
+}
+
+.navbar{
+    position: absolute !important;
+    z-index: 3;
+    right: 0;
+    left: 0;
+}
+
+.icon{
+z-index: 10;
+color: aliceblue;
+}
+
+.header{
+    width: 100%;
+       height: 35%;
+       position: relative;
+    &__contenedor{
+       
+        &__img{
+            width: 100%;
+            max-height: 90% ;
+            position: absolute !important;
+        }
+
+        &__parrafo{
+            position: absolute;
+            width: 100%;
+            height: 90%;
+           
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            &__texto{
+                width: 35%;
+                font-family:$font-principal;
+                text-align: center;
+                margin: 5%;
+                color: #460046;
+            }
+        }
+    }
+}
+
+.nav{
+
+    &__logo{
+        font-family: $font-logo;
+        color: white;
+        font-weight: 900;
+        font-size: 180% !important;
+    }
+    &__logo:hover{
+        color: rgb(219, 32, 219);
+    }
+
+
+&__right{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+
+    &__item{
+
+        &--font{
+            font-family: $font-principal;
+            font-size: 90%;
+            color: white;
+        }
+
+        &--font:hover{
+            color: rgb(219, 32, 219);
+            font-size: 200%;
+        }
+    }
+ }
+}
+
+
+.sobremi{
+    &__titulo{
+    text-align: center;
+    font-family: $font-principal;
+    font-size: 350%;
+    margin-top: 4%;
+}
+
+    &__contenedor{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        &__img{
+            width: 60%;
+            animation: mover 3s linear infinite alternate;
+            max-width: 400px;
+        }
+
+        &__descripcion{
+            width: 70%;
+            text-align: justify;
+            &__cont{
+                width: 100%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+                &__img{
+                    min-width: 120px;
+                    width: 30%;
+                    transform: rotate(20deg);
+                }
+            }
+        }
+    }
+}
+
+.habilidades{
+    position: relative;
+    background-color: #980492;
+    overflow: hidden;
+
+    &__titulo{
+        text-align: center;
+        font-family: $font-principal;
+        color: white;
+        font-size: 250%;
+        margin: 4%;
+    }
+
+    &__contenedor{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        &__img{
+           position: absolute;
+            z-index: 3;
+            left: -130px;
+            top: 60%;  
+            width: 80%;
+        }
+
+        &__card{
+            width: 60%;
+            margin: 4%;
+            max-width: 400px;
+        }
+    }
+}
+
+.carrusel{
+
+    &__contenedor{
+        background-color: white;
+        padding: 4%;
+        border-radius: 10px;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+    
+    }
+}
+
+.proyectos{
+    &__titulo{
+        text-align: center;
+        font-family: $font-principal;
+        font-size: 350%;
+        margin-top: 4%;
+    }
+}
+
+@keyframes mover {
+    0%{
+       transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+
+@media screen and (min-width:850px) {
+    .header{    
+           height: 100%;
+        &__contenedor{
+    
+            &__parrafo{
+                &__texto{
+                    width: 35%;
+                    font-family:$font-principal;
+                    text-align: center;
+                    margin: 5%;
+                    color: #460046;
+                    font-size: 250%;
+                }
+            }
+        }
+    }
+
+    .nav{
+        &__logo{
+            
+            font-size: 380% !important;
+        }
+    }
+
+    .habilidades{
+        position: relative;
+
+        &__titulo{
+            text-align: center;
+            font-family: $font-principal;
+            color: white;
+        }
+    
+        &__contenedor{
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            &__img{
+               position: absolute;
+                z-index: 3;
+                left: 130px;
+                top: auto;  
+                width: 30%;
+                bottom: 10%;
+            }
+        }
+    }
+
+
+    
+}
