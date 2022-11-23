@@ -21,6 +21,9 @@ body{
     z-index: 3;
     right: 0;
     left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
 }
 
 .icon{
@@ -76,7 +79,7 @@ color: aliceblue;
     width: 100%;
     display: flex;
     justify-content: end;
-    align-items: flex-end;
+   
 
     &__item{
 
@@ -155,9 +158,10 @@ color: aliceblue;
         &__img{
            position: absolute;
             z-index: 3;
-            left: -130px;
+            left: -125px;
             top: 60%;  
-            width: 80%;
+            width: 75%;
+            max-width: 300px;
         }
 
         &__card{
@@ -190,6 +194,74 @@ color: aliceblue;
     }
 }
 
+.contacto{
+    background-color: #3d0202;
+    &__titulo{
+        text-align: center;
+        font-family: $font-principal;
+        font-size: 350%;
+        margin-top: 4%;
+        color: white;
+    }
+}
+
+.form{
+    &__seccion{
+        width: 100%;
+        display: flex;
+        min-height: 100px;
+        flex-direction: column;
+        &__input{
+            height: 40px;
+        }
+
+        &__input, &__text{
+            margin: 10px;
+            color: #3d0202;
+            font-family: $font-principal;
+        }
+
+        &__buton{
+            border: outset rgb(53, 24, 24);
+            margin: 10px;
+            background-color: #594126;
+            color: white;
+            font-family: $font-principal;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        ::placeholder{
+            color: #3d0202;
+        }
+    }
+}
+
+.footer{
+    width: 100%;
+    background-color: #3d0202;
+    border: none;
+
+    &__redes{
+        width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        &__item{
+            margin-top: 2%;
+            color: white;
+            text-align: center;
+            padding: 2%;
+        }
+
+    }
+    &__copy{
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+}
+
 @keyframes mover {
     0%{
        transform: translateY(-20px);
@@ -202,8 +274,47 @@ color: aliceblue;
     }
 }
 
+.btn--color{
+    width: 90%;
+    background-color: #980492;
+    border-color: #460046;
+    background-image: linear-gradient(to right, #980492 50%, #460046 50%);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.5s ease;
+    box-shadow: 2px 2px 0 0 rgba(128, 128, 128, 0.201);
+    
+}
+
+.btn--color:hover{
+    background-position: right;
+}
+
+
 
 @media screen and (min-width:850px) {
+
+    .nav{ 
+    &__right{
+        &__item{
+    
+            &--font{
+                font-family: $font-principal;
+                font-size: 180%;
+                color: white;
+            }
+        }
+     }
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+
+
+
     .header{    
            height: 100%;
         &__contenedor{
@@ -253,5 +364,4 @@ color: aliceblue;
     }
 
 
-    
-}
+}  

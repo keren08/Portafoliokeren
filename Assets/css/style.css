@@ -15,6 +15,9 @@ body {
   z-index: 3;
   right: 0;
   left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: left;
 }
 
 .icon {
@@ -61,7 +64,6 @@ body {
   width: 100%;
   display: flex;
   justify-content: end;
-  align-items: flex-end;
 }
 .nav__right__item--font {
   font-family: "Creepster", cursive;
@@ -128,9 +130,10 @@ body {
 .habilidades__contenedor__img {
   position: absolute;
   z-index: 3;
-  left: -130px;
+  left: -125px;
   top: 60%;
-  width: 80%;
+  width: 75%;
+  max-width: 300px;
 }
 .habilidades__contenedor__card {
   width: 60%;
@@ -154,6 +157,67 @@ body {
   margin-top: 4%;
 }
 
+.contacto {
+  background-color: #3d0202;
+}
+.contacto__titulo {
+  text-align: center;
+  font-family: "Creepster", cursive;
+  font-size: 350%;
+  margin-top: 4%;
+  color: white;
+}
+
+.form__seccion {
+  width: 100%;
+  display: flex;
+  min-height: 100px;
+  flex-direction: column;
+}
+.form__seccion__input {
+  height: 40px;
+}
+.form__seccion__input, .form__seccion__text {
+  margin: 10px;
+  color: #3d0202;
+  font-family: "Creepster", cursive;
+}
+.form__seccion__buton {
+  border: outset rgb(53, 24, 24);
+  margin: 10px;
+  background-color: #594126;
+  color: white;
+  font-family: "Creepster", cursive;
+  height: 50px;
+  border-radius: 10px;
+}
+.form__seccion ::placeholder {
+  color: #3d0202;
+}
+
+.footer {
+  width: 100%;
+  background-color: #3d0202;
+  border: none;
+}
+.footer__redes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__redes__item {
+  margin-top: 2%;
+  color: white;
+  text-align: center;
+  padding: 2%;
+}
+.footer__copy {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
 @keyframes mover {
   0% {
     transform: translateY(-20px);
@@ -165,7 +229,33 @@ body {
     transform: translateY(20px);
   }
 }
+.btn--color {
+  width: 90%;
+  background-color: #980492;
+  border-color: #460046;
+  background-image: linear-gradient(to right, #980492 50%, #460046 50%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 0.5s ease;
+  box-shadow: 2px 2px 0 0 rgba(128, 128, 128, 0.201);
+}
+
+.btn--color:hover {
+  background-position: right;
+}
+
 @media screen and (min-width: 850px) {
+  .nav__right__item--font {
+    font-family: "Creepster", cursive;
+    font-size: 180%;
+    color: white;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+  }
   .header {
     height: 100%;
   }
