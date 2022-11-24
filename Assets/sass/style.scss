@@ -109,7 +109,17 @@ color: aliceblue;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-    
+        
+        &__nombre{
+        font-family: $font-principal;
+        display: block;
+        white-space: nowrap;
+        border-right: 2px solid;
+        width: 24ch ;
+        animation: maquina 2s steps(24), escribir 0.5s infinite step-end alternate;
+        overflow: hidden;
+    }
+
         &__img{
             width: 60%;
             animation: mover 3s linear infinite alternate;
@@ -202,6 +212,18 @@ color: aliceblue;
     }
 }
 
+@keyframes maquina {
+    from{
+        width: 0;
+    }
+}
+
+@keyframes escribir {
+    50%{
+        border-color: transparent;
+    }
+    
+}
 
 @media screen and (min-width:850px) {
     .header{    
