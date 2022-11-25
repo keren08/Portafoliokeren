@@ -112,6 +112,8 @@ color: aliceblue;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+     
     
         &__img{
             width: 60%;
@@ -132,6 +134,16 @@ color: aliceblue;
                     width: 30%;
                     transform: rotate(20deg);
                 }
+            }
+
+            &__nombre{
+                font-family: $font-principal;
+                display: block;
+                white-space: nowrap;
+                border-right: 2px solid;//limea negra
+                width: 100%;//tamaño de contenedor
+                overflow: hidden;
+                animation: maquina 3s  steps(24) infinite, escribir .5s infinite step-end alternate ;
             }
         }
     }
@@ -178,7 +190,7 @@ color: aliceblue;
         background-color: white;
         padding: 4%;
         border-radius: 10px;
-        min-height: 300px;
+        min-height: 500px;
         display: flex;
         align-items: center;
     
@@ -274,6 +286,18 @@ color: aliceblue;
     }
 }
 
+@keyframes maquina {
+    from{
+        width: 0;
+    }
+}
+
+@keyframes escribir {
+    50%{
+        border-color: transparent;//efecto de parpadeo de la linea
+    }
+}
+
 .btn--color{
     width: 90%;
     background-color: #980492;
@@ -339,6 +363,22 @@ color: aliceblue;
         }
     }
 
+    .sobremi{
+        &__contenedor{
+            &__descripcion{
+                &__nombre{
+                    font-family: $font-principal;
+                    display: block;
+                    white-space: nowrap;
+                    border-right: 2px solid;//limea negra
+                    width: 24ch;//tamaño de contenedor
+                    overflow: hidden;
+                    animation: maquina 3s  steps(24) infinite, escribir .5s infinite step-end alternate ;
+                }
+            }
+        }
+    }
+
     .habilidades{
         position: relative;
 
@@ -363,5 +403,6 @@ color: aliceblue;
         }
     }
 
+    
 
 }  

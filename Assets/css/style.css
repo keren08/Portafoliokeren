@@ -108,6 +108,15 @@ body {
   width: 30%;
   transform: rotate(20deg);
 }
+.sobremi__contenedor__descripcion__nombre {
+  font-family: "Creepster", cursive;
+  display: block;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: 100%;
+  overflow: hidden;
+  animation: maquina 3s steps(24) infinite, escribir 0.5s infinite step-end alternate;
+}
 
 .habilidades {
   position: relative;
@@ -145,7 +154,7 @@ body {
   background-color: white;
   padding: 4%;
   border-radius: 10px;
-  min-height: 300px;
+  min-height: 500px;
   display: flex;
   align-items: center;
 }
@@ -229,6 +238,16 @@ body {
     transform: translateY(20px);
   }
 }
+@keyframes maquina {
+  from {
+    width: 0;
+  }
+}
+@keyframes escribir {
+  50% {
+    border-color: transparent;
+  }
+}
 .btn--color {
   width: 90%;
   background-color: #980492;
@@ -269,6 +288,15 @@ body {
   }
   .nav__logo {
     font-size: 380% !important;
+  }
+  .sobremi__contenedor__descripcion__nombre {
+    font-family: "Creepster", cursive;
+    display: block;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 24ch;
+    overflow: hidden;
+    animation: maquina 3s steps(24) infinite, escribir 0.5s infinite step-end alternate;
   }
   .habilidades {
     position: relative;
