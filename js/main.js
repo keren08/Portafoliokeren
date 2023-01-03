@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (
-    Validar.texto(nombre) &&
-    Validar.correo(correo) &&
-    Validar.texto(mensaje)
-  ) {
+  let validNombre = Validar.texto(nombre);
+  let validCorreo = Validar.correo(correo);
+  let validMensaje = Validar.texto(mensaje);
+
+  if (validNombre && validCorreo && validMensaje) {
     form.submit();
   }
 });
