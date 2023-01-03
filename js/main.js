@@ -1,4 +1,5 @@
 import Informacion from "./modules/info.js";
+import Validar from "./modules/validacion.js";
 
 //variables para almacenar informacion
 const listCard = document.getElementById("Lista__cards");
@@ -17,6 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  if (
+    Validar.texto(nombre) &&
+    Validar.correo(correo) &&
+    Validar.texto(mensaje)
+  ) {
+    form.submit();
+  }
 });
 
 verMas.addEventListener("click", (e) => {

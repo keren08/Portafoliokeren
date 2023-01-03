@@ -254,7 +254,12 @@
       </section>
       <section id="contacto" class="contacto">
         <h2 class="contacto__titulo">CONTACTATE CONMIGO</h2>
-        <form action="" class="form container-md" id="form">
+        <form
+          class="form container-md"
+          id="form"
+          action="https://formspree.io/f/mqkokppq"
+          method="POST"
+        >
           <section class="form__seccion">
             <input
               class="form__seccion__input"
@@ -265,8 +270,8 @@
             />
             <input
               class="form__seccion__input"
-              type="text"
-              name="correo"
+              type="email"
+              name="email"
               id="correo"
               placeholder="Correo"
             />
@@ -275,13 +280,12 @@
           <section class="form__seccion">
             <textarea
               class="form__seccion__text"
-              name="mensaje"
+              name="message"
               id="mensaje"
               cols="30"
               rows="10"
-            >
-mensaje</textarea
-            >
+              placeholder="mensaje"
+            ></textarea>
           </section>
 
           <section class="form__seccion">

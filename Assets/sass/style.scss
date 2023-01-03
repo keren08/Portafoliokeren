@@ -282,6 +282,18 @@ body {
   }
 }
 
+.texto_blanco {
+  color: aliceblue;
+}
+
+.borde_error {
+  border: 1px solid red;
+}
+
+.borde_error::placeholder {
+  color: red;
+}
+
 .hidden {
   display: none;
 }
