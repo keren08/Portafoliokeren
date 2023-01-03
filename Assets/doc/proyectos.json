@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nombre":"Yelpcamp",
+        "link":"https://keren08.github.io/keren_ramos_M1_final/",
+        "description": "Pagina para encontrar los mejores lugares para acampar",
+        "img":"proyecto1.jpg"
+
+    },
+    {
+        "id": 2,
+        "nombre":"Universidad Tecnica Medioambiental",
+        "link":"https://keren08.github.io/keren_ramos_DRILLING10/",
+        "description": "Landing pages de una universidad.",
+        "img":"proyecto2.jpg"
+
+    },
+    {
+        "id": 3,
+        "nombre":"Bodega el kiosko",
+        "link":"https://keren08.github.io/keren_eunice_ramos_DRILLING9/",
+        "description": "Ecommer de una bodega de venta de productos para el hogar.",
+        "img":"proyecto3.jpg"
+
+    },
+    {
+        "id": 4,
+        "nombre":"Ecommer",
+        "link":"https://keren08.github.io/keren_Ramos_Drilling2_9/",
+        "description": "Ecommers productos de seguridad para ciclistas y mucho más.",
+        "img":"proyecto4.jpg"
+
+    },
+    {
+        "id": 5,
+        "nombre":"To do list",
+        "link":"https://keren08.github.io/todolist/",
+        "description": "No olvides hacer tus pendientes",
+        "img":"proyecto5.jpg"
+
+    },
+    {
+        "id": 6,
+        "nombre":"ONEMIND",
+        "link":"https://keren08.github.io/keren_ramos_Rebound3_3/",
+        "description": "Da a conocer tus sentimientos",
+        "img":"proyecto6.jpg"
+
+    }
+]
