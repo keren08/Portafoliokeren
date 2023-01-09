@@ -246,112 +246,33 @@
       <section id="proyectos" class="proyecto container-md">
         <h2 class="proyectos__titulo">PROYECTOS</h2>
         <div>
-          <div class="row row-cols-1 row-cols-md-2">
-            <div class="col mb-4">
-              <div class="card">
-                <img
-                  src="Assets/img/proyecto1.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Yelpcamp</h5>
-                  <p class="card-text">
-                    Pagina para encontrar los mejores lugares para acampar
-                  </p>
-                </div>
-                <div class="card-body d-flex justify-content-center">
-                  <a
-                    href="https://keren08.github.io/keren_ramos_M1_final/"
-                    class="btn btn-primary btn--color"
-                    >Ver mas</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col mb-4">
-              <div class="card">
-                <img
-                  src="Assets/img/proyecto2.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Universidad Tecnica Medioambiental</h5>
-                  <p class="card-text">Landing pages de una universidad.</p>
-                </div>
-                <div class="card-body d-flex justify-content-center">
-                  <a
-                    href="https://keren08.github.io/keren_ramos_DRILLING10/"
-                    class="btn btn-primary btn--color"
-                    >Ver mas</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col mb-4">
-              <div class="card">
-                <img
-                  src="Assets/img/proyecto3.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Bodega el kiosko</h5>
-                  <p class="card-text">
-                    Ecommer de una bodega de venta de productos para el hogar.
-                  </p>
-                </div>
-                <div class="card-body d-flex justify-content-center">
-                  <a
-                    href="https://keren08.github.io/keren_eunice_ramos_DRILLING9/"
-                    class="btn btn-primary btn--color"
-                    >Ver mas</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col mb-4">
-              <div class="card">
-                <img
-                  src="Assets/img/proyecto4.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Ecommer</h5>
-                  <p class="card-text">
-                    Ecommers productos de seguridad para ciclistas y mucho más.
-                  </p>
-                </div>
-                <div class="card-body d-flex justify-content-center">
-                  <a
-                    href="https://keren08.github.io/keren_Ramos_Drilling2_9/"
-                    class="btn btn-primary btn--color"
-                    >Ver mas</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="row row-cols-1 row-cols-md-2" id="Lista__cards"></div>
+        </div>
+        <div class="proyectos__vermas">
+          <a id="vermas">Ver mas proyectos</a>
         </div>
       </section>
       <section id="contacto" class="contacto">
         <h2 class="contacto__titulo">CONTACTATE CONMIGO</h2>
-        <form action="" class="form container-md">
+        <form
+          class="form container-md"
+          id="form"
+          action="https://formspree.io/f/mqkokppq"
+          method="POST"
+        >
           <section class="form__seccion">
             <input
               class="form__seccion__input"
               type="text"
-              name=""
-              id=""
+              name="nombre"
+              id="nombre"
               placeholder="Nombre"
             />
             <input
               class="form__seccion__input"
-              type="text"
-              name=""
-              id=""
+              type="email"
+              name="email"
+              id="correo"
               placeholder="Correo"
             />
           </section>
@@ -359,17 +280,18 @@
           <section class="form__seccion">
             <textarea
               class="form__seccion__text"
-              name="mensaje"
-              id=""
+              name="message"
+              id="mensaje"
               cols="30"
               rows="10"
-            >
-mensaje</textarea
-            >
+              placeholder="mensaje"
+            ></textarea>
           </section>
 
           <section class="form__seccion">
-            <button class="form__seccion__buton" type="submit">Enviar</button>
+            <button class="form__seccion__buton" type="submit" id="enviar">
+              Enviar
+            </button>
           </section>
         </form>
       </section>
@@ -400,4 +322,6 @@ mensaje</textarea
       </div>
     </footer>
   </body>
+  <script src="Assets/jquery/jquery-3.6.3.min.js"></script>
+  <script src="js/main.js" type="module"></script>
 </html>

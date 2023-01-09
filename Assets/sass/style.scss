@@ -1,408 +1,431 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Creepster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo&family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo&family=Dancing+Script&display=swap");
 
-$color-principal:#460046;
+$color-principal: #460046;
 
-$font-principal:'Creepster', cursive;
-$font-logo: 'Dancing Script', cursive;
+$font-principal: "Creepster", cursive;
+$font-logo: "Dancing Script", cursive;
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    height:100vh;
-    width: 100%; 
+body {
+  height: 100vh;
+  width: 100%;
 }
 
-.navbar{
-    position: absolute !important;
-    z-index: 3;
-    right: 0;
-    left: 0;
-    display: flex;
-    flex-direction: row-reverse;
-    text-align: left;
+.navbar {
+  position: absolute !important;
+  z-index: 3;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: left;
 }
 
-.icon{
-z-index: 10;
-color: aliceblue;
+.icon {
+  z-index: 10;
+  color: aliceblue;
 }
 
-.header{
-    width: 100%;
-       height: 35%;
-       position: relative;
-    &__contenedor{
-       
-        &__img{
-            width: 100%;
-            max-height: 90% ;
-            position: absolute !important;
-        }
-
-        &__parrafo{
-            position: absolute;
-            width: 100%;
-            height: 90%;
-           
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            &__texto{
-                width: 35%;
-                font-family:$font-principal;
-                text-align: center;
-                margin: 5%;
-                color: #460046;
-            }
-        }
-    }
-}
-
-.nav{
-
-    &__logo{
-        font-family: $font-logo;
-        color: white;
-        font-weight: 900;
-        font-size: 180% !important;
-    }
-    &__logo:hover{
-        color: rgb(219, 32, 219);
+.header {
+  width: 100%;
+  height: 35%;
+  position: relative;
+  &__contenedor {
+    &__img {
+      width: 100%;
+      max-height: 90%;
+      position: absolute !important;
     }
 
+    &__parrafo {
+      position: absolute;
+      width: 100%;
+      height: 90%;
 
-&__right{
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      &__texto {
+        width: 35%;
+        font-family: $font-principal;
+        text-align: center;
+        margin: 5%;
+        color: #460046;
+      }
+    }
+  }
+}
+
+.nav {
+  &__logo {
+    font-family: $font-logo;
+    color: white;
+    font-weight: 900;
+    font-size: 180% !important;
+  }
+  &__logo:hover {
+    color: rgb(219, 32, 219);
+  }
+
+  &__right {
     width: 100%;
     display: flex;
     justify-content: end;
-   
 
-    &__item{
+    &__item {
+      &--font {
+        font-family: $font-principal;
+        font-size: 90%;
+        color: white;
+      }
 
-        &--font{
-            font-family: $font-principal;
-            font-size: 90%;
-            color: white;
-        }
-
-        &--font:hover{
-            color: rgb(219, 32, 219);
-            font-size: 200%;
-        }
+      &--font:hover {
+        color: rgb(219, 32, 219);
+        font-size: 200%;
+      }
     }
- }
+  }
 }
 
-
-.sobremi{
-    &__titulo{
+.sobremi {
+  &__titulo {
     text-align: center;
     font-family: $font-principal;
     font-size: 350%;
     margin-top: 4%;
-}
+  }
 
-    &__contenedor{
+  &__contenedor {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__img {
+      width: 60%;
+      animation: mover 3s linear infinite alternate;
+      max-width: 400px;
+    }
+
+    &__descripcion {
+      width: 70%;
+      text-align: justify;
+      &__cont {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-
-     
-    
-        &__img{
-            width: 60%;
-            animation: mover 3s linear infinite alternate;
-            max-width: 400px;
+        &__img {
+          min-width: 120px;
+          width: 30%;
+          transform: rotate(20deg);
         }
+      }
 
-        &__descripcion{
-            width: 70%;
-            text-align: justify;
-            &__cont{
-                width: 100%;
-               display: flex;
-               align-items: center;
-               justify-content: center;
-                &__img{
-                    min-width: 120px;
-                    width: 30%;
-                    transform: rotate(20deg);
-                }
-            }
-
-            &__nombre{
-                font-family: $font-principal;
-                display: block;
-                white-space: nowrap;
-                border-right: 2px solid;//limea negra
-                width: 100%;//tamaño de contenedor
-                overflow: hidden;
-                animation: maquina 3s  steps(24) infinite, escribir .5s infinite step-end alternate ;
-            }
-        }
-    }
-}
-
-.habilidades{
-    position: relative;
-    background-color: #980492;
-    overflow: hidden;
-
-    &__titulo{
-        text-align: center;
+      &__nombre {
         font-family: $font-principal;
-        color: white;
-        font-size: 250%;
-        margin: 4%;
+        display: block;
+        white-space: nowrap;
+        border-right: 2px solid; //limea negra
+        width: 100%; //tamaño de contenedor
+        overflow: hidden;
+        animation: maquina 3s steps(24) infinite,
+          escribir 0.5s infinite step-end alternate;
+      }
     }
-
-    &__contenedor{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        &__img{
-           position: absolute;
-            z-index: 3;
-            left: -125px;
-            top: 60%;  
-            width: 75%;
-            max-width: 300px;
-        }
-
-        &__card{
-            width: 60%;
-            margin: 4%;
-            max-width: 400px;
-        }
-    }
+  }
 }
 
-.carrusel{
+.habilidades {
+  position: relative;
+  background-color: #980492;
+  overflow: hidden;
 
-    &__contenedor{
-        background-color: white;
-        padding: 4%;
-        border-radius: 10px;
-        min-height: 500px;
-        display: flex;
-        align-items: center;
-    
-    }
-}
+  &__titulo {
+    text-align: center;
+    font-family: $font-principal;
+    color: white;
+    font-size: 250%;
+    margin: 4%;
+  }
 
-.proyectos{
-    &__titulo{
-        text-align: center;
-        font-family: $font-principal;
-        font-size: 350%;
-        margin-top: 4%;
-    }
-}
-
-.contacto{
-    background-color: #3d0202;
-    &__titulo{
-        text-align: center;
-        font-family: $font-principal;
-        font-size: 350%;
-        margin-top: 4%;
-        color: white;
-    }
-}
-
-.form{
-    &__seccion{
-        width: 100%;
-        display: flex;
-        min-height: 100px;
-        flex-direction: column;
-        &__input{
-            height: 40px;
-        }
-
-        &__input, &__text{
-            margin: 10px;
-            color: #3d0202;
-            font-family: $font-principal;
-        }
-
-        &__buton{
-            border: outset rgb(53, 24, 24);
-            margin: 10px;
-            background-color: #594126;
-            color: white;
-            font-family: $font-principal;
-            height: 50px;
-            border-radius: 10px;
-        }
-
-        ::placeholder{
-            color: #3d0202;
-        }
-    }
-}
-
-.footer{
+  &__contenedor {
     width: 100%;
-    background-color: #3d0202;
-    border: none;
-
-    &__redes{
-        width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-        &__item{
-            margin-top: 2%;
-            color: white;
-            text-align: center;
-            padding: 2%;
-        }
-
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &__img {
+      position: absolute;
+      z-index: 3;
+      left: -125px;
+      top: 60%;
+      width: 75%;
+      max-width: 300px;
     }
-    &__copy{
-        width: 100%;
-        text-align: center;
-        color: white;
+
+    &__card {
+      width: 60%;
+      margin: 4%;
+      max-width: 400px;
     }
+  }
+}
+
+.carrusel {
+  &__contenedor {
+    background-color: white;
+    padding: 4%;
+    border-radius: 10px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.proyectos {
+  &__titulo {
+    text-align: center;
+    font-family: $font-principal;
+    font-size: 350%;
+    margin-top: 4%;
+  }
+}
+
+.contacto {
+  background-color: #3d0202;
+  &__titulo {
+    text-align: center;
+    font-family: $font-principal;
+    font-size: 350%;
+    margin-top: 4%;
+    color: white;
+  }
+}
+
+.form {
+  &__seccion {
+    width: 100%;
+    display: flex;
+    min-height: 100px;
+    flex-direction: column;
+    &__input {
+      height: 40px;
+    }
+
+    &__input,
+    &__text {
+      margin: 10px;
+      color: #3d0202;
+      font-family: $font-principal;
+    }
+
+    &__buton {
+      border: outset rgb(53, 24, 24);
+      margin: 10px;
+      background-color: #594126;
+      color: white;
+      font-family: $font-principal;
+      height: 50px;
+      border-radius: 10px;
+    }
+
+    ::placeholder {
+      color: #3d0202;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  background-color: #3d0202;
+  border: none;
+
+  &__redes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__item {
+      margin-top: 2%;
+      color: white;
+      text-align: center;
+      padding: 2%;
+    }
+  }
+  &__copy {
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+}
+
+.proyectos__vermas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  a {
+    background-color: #460046;
+    padding: 3% 20%;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: #980492;
+  }
+}
+
+.texto_blanco {
+  color: aliceblue;
+}
+
+.borde_error {
+  border: 1px solid red;
+}
+
+.borde_error::placeholder {
+  color: red;
+}
+
+.hidden {
+  display: none;
 }
 
 @keyframes mover {
-    0%{
-       transform: translateY(-20px);
-    }
-    50%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(20px);
-    }
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
 }
 
 @keyframes maquina {
-    from{
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 }
 
 @keyframes escribir {
-    50%{
-        border-color: transparent;//efecto de parpadeo de la linea
-    }
+  50% {
+    border-color: transparent; //efecto de parpadeo de la linea
+  }
 }
 
-.btn--color{
-    width: 90%;
-    background-color: #980492;
-    border-color: #460046;
-    background-image: linear-gradient(to right, #980492 50%, #460046 50%);
-    background-repeat: no-repeat;
-    background-size: 200%;
-    background-position: left;
-    transition: background-position 0.5s ease;
-    box-shadow: 2px 2px 0 0 rgba(128, 128, 128, 0.201);
-    
+.btn--color {
+  width: 90%;
+  background-color: #980492;
+  border-color: #460046;
+  background-image: linear-gradient(to right, #980492 50%, #460046 50%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 0.5s ease;
+  box-shadow: 2px 2px 0 0 rgba(128, 128, 128, 0.201);
 }
 
-.btn--color:hover{
-    background-position: right;
+.btn--color:hover {
+  background-position: right;
 }
 
-
-
-@media screen and (min-width:850px) {
-
-    .nav{ 
-    &__right{
-        &__item{
-    
-            &--font{
-                font-family: $font-principal;
-                font-size: 180%;
-                color: white;
-            }
+@media screen and (min-width: 850px) {
+  .nav {
+    &__right {
+      &__item {
+        &--font {
+          font-family: $font-principal;
+          font-size: 180%;
+          color: white;
         }
-     }
+      }
     }
-    .navbar{
-        display: flex;
-        flex-direction: row;
-        text-align: left;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .header {
+    height: 100%;
+    &__contenedor {
+      &__parrafo {
+        &__texto {
+          width: 35%;
+          font-family: $font-principal;
+          text-align: center;
+          margin: 5%;
+          color: #460046;
+          font-size: 250%;
+        }
+      }
     }
+  }
 
-
-
-    .header{    
-           height: 100%;
-        &__contenedor{
-    
-            &__parrafo{
-                &__texto{
-                    width: 35%;
-                    font-family:$font-principal;
-                    text-align: center;
-                    margin: 5%;
-                    color: #460046;
-                    font-size: 250%;
-                }
-            }
-        }
+  .nav {
+    &__logo {
+      font-size: 380% !important;
     }
+  }
 
-    .nav{
-        &__logo{
-            
-            font-size: 380% !important;
+  .sobremi {
+    &__contenedor {
+      &__descripcion {
+        &__nombre {
+          font-family: $font-principal;
+          display: block;
+          white-space: nowrap;
+          border-right: 2px solid; //limea negra
+          width: 24ch; //tamaño de contenedor
+          overflow: hidden;
+          animation: maquina 3s steps(24) infinite,
+            escribir 0.5s infinite step-end alternate;
         }
+      }
     }
+  }
 
-    .sobremi{
-        &__contenedor{
-            &__descripcion{
-                &__nombre{
-                    font-family: $font-principal;
-                    display: block;
-                    white-space: nowrap;
-                    border-right: 2px solid;//limea negra
-                    width: 24ch;//tamaño de contenedor
-                    overflow: hidden;
-                    animation: maquina 3s  steps(24) infinite, escribir .5s infinite step-end alternate ;
-                }
-            }
-        }
-    }
+  .habilidades {
+    position: relative;
 
-    .habilidades{
-        position: relative;
-
-        &__titulo{
-            text-align: center;
-            font-family: $font-principal;
-            color: white;
-        }
-    
-        &__contenedor{
-            width: 100%;
-            display: flex;
-            align-items: flex-end;
-            &__img{
-               position: absolute;
-                z-index: 3;
-                left: 130px;
-                top: auto;  
-                width: 30%;
-                bottom: 10%;
-            }
-        }
+    &__titulo {
+      text-align: center;
+      font-family: $font-principal;
+      color: white;
     }
 
-    
+    &__contenedor {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      &__img {
+        position: absolute;
+        z-index: 3;
+        left: 130px;
+        top: auto;
+        width: 30%;
+        bottom: 10%;
+      }
+    }
+  }
 
-}  
+  .proyectos__vermas {
+    a {
+      margin-top: 2%;
+      background-color: #460046;
+      padding: 2% 20%;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  }
+}

@@ -227,6 +227,38 @@ body {
   color: white;
 }
 
+.proyectos__vermas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+}
+.proyectos__vermas a {
+  background-color: #460046;
+  padding: 3% 20%;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.proyectos__vermas a:hover {
+  background-color: #980492;
+}
+
+.texto_blanco {
+  color: aliceblue;
+}
+
+.borde_error {
+  border: 1px solid red;
+}
+
+.borde_error::placeholder {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
 @keyframes mover {
   0% {
     transform: translateY(-20px);
@@ -318,6 +350,13 @@ body {
     top: auto;
     width: 30%;
     bottom: 10%;
+  }
+  .proyectos__vermas a {
+    margin-top: 2%;
+    background-color: #460046;
+    padding: 2% 20%;
+    border-radius: 5px;
+    text-decoration: none;
   }
 }
 
