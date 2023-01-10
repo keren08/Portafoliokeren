@@ -5,6 +5,8 @@ import Validar from "./modules/validacion.js";
 const listCard = document.getElementById("Lista__cards");
 const form = document.getElementById("form");
 const verMas = document.getElementById("vermas");
+const btn = document.getElementById("nav__btn");
+const menu = document.getElementById("menu");
 
 //inputs form
 const nombre = document.getElementById("nombre");
@@ -14,6 +16,14 @@ const mensaje = document.getElementById("mensaje");
 //Obtiene la informacion del json y la muestra en las cards
 document.addEventListener("DOMContentLoaded", () => {
   Informacion.obtenerInfo(listCard);
+});
+
+btn.addEventListener("click", () => {
+  activarClases();
+});
+
+menu.addEventListener("click", () => {
+  activarClases();
 });
 
 form.addEventListener("submit", (e) => {
@@ -39,3 +49,8 @@ verMas.addEventListener("click", (e) => {
     Informacion.obtenerInfo(listCard);
   }
 });
+
+function activarClases() {
+  btn.classList.toggle("active");
+  menu.classList.toggle("activar");
+}

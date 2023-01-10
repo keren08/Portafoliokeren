@@ -16,6 +16,31 @@ body {
   width: 100%;
 }
 
+.nav__btn {
+  width: 30px;
+  padding: 2%;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background-color: aliceblue;
+  margin: 4px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__btn.active .bar:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.nav__btn.active .bar:nth-child(2) {
+  display: none;
+}
+
+.nav__btn.active .bar:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
 .navbar {
   position: absolute !important;
   z-index: 3;
@@ -24,6 +49,8 @@ body {
   display: flex;
   flex-direction: row-reverse;
   text-align: left;
+  align-items: flex-start;
+  padding: 0px;
 }
 
 .icon {
@@ -39,7 +66,7 @@ body {
     &__img {
       width: 100%;
       max-height: 90%;
-      position: absolute !important;
+      position: absolute;
     }
 
     &__parrafo {
@@ -62,34 +89,72 @@ body {
 }
 
 .nav {
+  &__menu {
+    padding: 2%;
+  }
   &__logo {
     font-family: $font-logo;
     color: white;
     font-weight: 900;
     font-size: 180% !important;
+    width: 20%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 150px;
+    a {
+      color: aliceblue;
+    }
   }
+
   &__logo:hover {
     color: rgb(219, 32, 219);
   }
 
   &__right {
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: end;
+    list-style: none;
+    flex-direction: column;
 
     &__item {
+      padding-left: 2%;
+
       &--font {
         font-family: $font-principal;
         font-size: 90%;
         color: white;
+        text-decoration: none;
       }
 
       &--font:hover {
         color: rgb(219, 32, 219);
         font-size: 200%;
+        text-decoration: none;
       }
     }
   }
+}
+
+.nav__right li:nth-child(1) {
+  animation: menu 0.2s ease-in-out;
+}
+.nav__right li:nth-child(2) {
+  animation: menu 0.4s ease-in-out;
+}
+.nav__right li:nth-child(3) {
+  animation: menu 0.7s ease-in-out;
+}
+.nav__right li:nth-child(4) {
+  animation: menu 0.9s ease-in-out;
+}
+.nav__right li:nth-child(5) {
+  animation: menu 1.2s ease-in-out;
+}
+
+.activar {
+  display: flex;
 }
 
 .sobremi {
@@ -322,6 +387,18 @@ body {
   }
 }
 
+@keyframes menu {
+  0% {
+    transform: translateX(-120px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
 .btn--color {
   width: 90%;
   background-color: #980492;
@@ -340,7 +417,11 @@ body {
 
 @media screen and (min-width: 850px) {
   .nav {
+    &__menu {
+      width: 80%;
+    }
     &__right {
+      width: 100%;
       &__item {
         &--font {
           font-family: $font-principal;
@@ -349,6 +430,10 @@ body {
         }
       }
     }
+  }
+
+  .nav__btn {
+    display: none;
   }
   .navbar {
     display: flex;
@@ -375,6 +460,10 @@ body {
   .nav {
     &__logo {
       font-size: 380% !important;
+    }
+
+    &__right {
+      flex-direction: row;
     }
   }
 
