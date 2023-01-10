@@ -382,6 +382,8 @@ body {
   }
   .nav__right {
     width: 100%;
+    display: flex;
+    flex-direction: row;
   }
   .nav__right__item--font {
     font-family: "Creepster", cursive;
@@ -409,9 +411,6 @@ body {
   }
   .nav__logo {
     font-size: 380% !important;
-  }
-  .nav__right {
-    flex-direction: row;
   }
   .sobremi__contenedor__descripcion__nombre {
     font-family: "Creepster", cursive;

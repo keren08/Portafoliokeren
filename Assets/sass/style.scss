@@ -422,6 +422,8 @@ body {
     }
     &__right {
       width: 100%;
+      display: flex;
+      flex-direction: row;
       &__item {
         &--font {
           font-family: $font-principal;
@@ -462,9 +464,6 @@ body {
       font-size: 380% !important;
     }
 
-    &__right {
-      flex-direction: row;
-    }
   }
 
   .sobremi {
